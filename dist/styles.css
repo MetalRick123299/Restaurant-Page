@@ -6,5 +6,50 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bg-color: rgba(0, 0, 0, 0.9);
+  --item-color: rgba(0, 0, 0, 0.65);
+}
+
 .content {
+  height: 100vh;
+  width: 100vw;
+
+  background-image: url("./images/Burger-Background.jpg");
+  background-size: contain;
+
+  color: white;
+}
+
+header {
+  background-color: var(--bg-color);
+
+  text-align: center;
+  font-size: 2.75rem;
+  padding-bottom: 1.25rem;
+}
+
+header button {
+  outline: none;
+  border: none;
+
+  background-color: transparent;
+  color: white;
+
+  font-size: 2rem;
+  padding: 1rem;
+
+  cursor: pointer;
+  transition: transform 0.4s;
+}
+
+header button:hover {
+  transform: translateY(-10px);
+  transition: transform 0.4s;
+}
+
+header button:focus {
+  border-bottom: 3px solid white;
+  margin-bottom: -3px;
+  transition: border-bottom transform 0.2s;
 }
