@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Courgette&family=Kaushan+Script&display=swap");
+
+/*
+font-family: 'Berkshire Swash', cursive;
+*/
+
 *,
 *::before,
 *::after {
@@ -26,6 +32,8 @@ header {
 
   text-align: center;
   font-size: 2.75rem;
+  font-family: "Courgette", cursive;
+
   padding-bottom: 1.25rem;
 }
 
@@ -37,6 +45,7 @@ header button {
   color: white;
 
   font-size: 2rem;
+  font-family: "Kaushan Script", cursive;
   padding: 1rem;
 
   cursor: pointer;
@@ -48,7 +57,7 @@ header button:hover {
   transition: transform 0.4s;
 }
 
-header button:focus {
+header button.active {
   border-bottom: 3px solid white;
   margin-bottom: -3px;
   transition: border-bottom transform 0.2s;
