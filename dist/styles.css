@@ -13,8 +13,12 @@ font-family: 'Berkshire Swash', cursive;
 }
 
 :root {
-  --bg-color: rgba(0, 0, 0, 0.9);
-  --item-color: rgba(0, 0, 0, 0.75);
+  --item-color: rgba(0, 0, 0, 0.5);
+  --bg-color: rgba(0, 0, 0, 0.75);
+}
+
+html {
+  overflow-y: overlay;
 }
 
 .content {
@@ -76,7 +80,7 @@ header button.active {
   font-family: "Kaushan Script", cursive;
 
   padding: 3rem 10rem;
-  background-color: var(--item-color);
+  background-color: var(--bg-color);
 
   display: flex;
   flex-flow: column nowrap;
@@ -105,13 +109,37 @@ header button.active {
 .grid-item {
   max-width: 350px;
   padding: 1rem;
-  background-color: gray;
+  background-color: var(--item-color);
   display: flex;
   flex-flow: column nowrap;
   font-size: 1.25rem;
+
+  transition: all 0.2s;
+}
+
+.grid-item:hover {
+  background-color: rgba(50, 50, 50, 0.75);
 }
 
 .grid-item img {
   height: 300px;
   width: 300px;
+}
+
+.Contact {
+  padding: 3rem 10rem;
+  background-color: var(--bg-color);
+  font-size: 1.75rem;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+
+.col {
+  text-align: center;
+}
+
+.col li {
+  list-style: none;
 }
