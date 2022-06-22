@@ -14,12 +14,12 @@ font-family: 'Berkshire Swash', cursive;
 
 :root {
   --bg-color: rgba(0, 0, 0, 0.9);
-  --item-color: rgba(0, 0, 0, 0.65);
+  --item-color: rgba(0, 0, 0, 0.75);
 }
 
 .content {
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  min-width: 100vw;
 
   background-image: url("./images/Burger-Background.jpg");
   background-size: contain;
@@ -61,4 +61,29 @@ header button.active {
   border-bottom: 3px solid white;
   margin-bottom: -3px;
   transition: border-bottom transform 0.2s;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Home {
+  margin: 5rem;
+  padding: 3rem 10rem;
+  background-color: var(--item-color);
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.Home img {
+  object-fit: contain;
+  max-height: 250px;
+  max-width: 250px;
+  border-radius: 50%;
 }

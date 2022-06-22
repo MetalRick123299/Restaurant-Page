@@ -22,36 +22,21 @@ function createNav() {
   const contact = document.createElement("button");
 
   const navArr = [
-    [
-      home,
-      "Home",
-      function () {
-        loadHome();
-      },
-    ],
-    [
-      menu,
-      "Menu",
-      function () {
-        loadMenu();
-      },
-    ],
-    [
-      contact,
-      "Contact",
-      function () {
-        loadContact();
-      },
-    ],
+    [home, "Home", loadHome()],
+    [menu, "Menu", loadMenu()],
+    [contact, "Contact", loadContact()],
   ];
   navArr.forEach((item) => {
     item[0].textContent = item[1];
     item[0].setAttribute("id", item[1]);
     nav.appendChild(item[0]);
     item[0].addEventListener("click", (e) => {
+      const main = document.querySelector("#main");
       if (e.target.classList.contains("active")) return;
       setCurrentButton(item[0]);
-      item[2]();
+      if (main.firstChild.id == item[1]) return;
+      main.firstChild.remove();
+      main.appendChild(item[2]);
     });
   });
   home.classList.add("active");
@@ -74,6 +59,8 @@ function setCurrentButton(button) {
 function createMain() {
   const main = document.createElement("main");
   main.setAttribute("id", "main");
+  main.classList.add("main");
+  main.appendChild(loadHome());
 
   return main;
 }
