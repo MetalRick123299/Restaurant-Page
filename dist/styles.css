@@ -19,10 +19,10 @@ font-family: 'Berkshire Swash', cursive;
 
 .content {
   min-height: 100vh;
-  min-width: 100vw;
 
   background-image: url("./images/Burger-Background.jpg");
-  background-size: contain;
+  background-attachment: fixed;
+  background-size: cover;
 
   color: white;
 }
@@ -35,6 +35,7 @@ header {
   font-family: "Courgette", cursive;
 
   padding-bottom: 1.25rem;
+  margin-bottom: 5rem;
 }
 
 header button {
@@ -45,7 +46,7 @@ header button {
   color: white;
 
   font-size: 2rem;
-  font-family: "Kaushan Script", cursive;
+  font-family: "Berkshire Swash", cursive;
   padding: 1rem;
 
   cursor: pointer;
@@ -67,10 +68,13 @@ header button.active {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  max-width: 100vw;
 }
 
 .Home {
-  margin: 5rem;
+  font-family: "Kaushan Script", cursive;
+
   padding: 3rem 10rem;
   background-color: var(--item-color);
 
@@ -86,4 +90,28 @@ header button.active {
   max-height: 250px;
   max-width: 250px;
   border-radius: 50%;
+}
+
+.Menu {
+  padding: 3rem;
+  background-color: var(--bg-color);
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+
+.grid-item {
+  max-width: 350px;
+  padding: 1rem;
+  background-color: gray;
+  display: flex;
+  flex-flow: column nowrap;
+  font-size: 1.25rem;
+}
+
+.grid-item img {
+  height: 300px;
+  width: 300px;
 }
