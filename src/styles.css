@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Courgette&family=Kaushan+Script&display=swap");
+
+/*
+font-family: 'Berkshire Swash', cursive;
+*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --item-color: rgba(0, 0, 0, 0.5);
+  --bg-color: rgba(0, 0, 0, 0.75);
+}
+
+html {
+  overflow-y: overlay;
+}
+
+.content {
+  min-height: 100vh;
+
+  background-image: url("./images/Burger-Background.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+
+  color: white;
+}
+
+header {
+  background-color: var(--bg-color);
+
+  text-align: center;
+  font-size: 2.75rem;
+  font-family: "Courgette", cursive;
+
+  padding-bottom: 1.25rem;
+  margin-bottom: 5rem;
+}
+
+header button {
+  outline: none;
+  border: none;
+
+  background-color: transparent;
+  color: white;
+
+  font-size: 2rem;
+  font-family: "Berkshire Swash", cursive;
+  padding: 1rem;
+
+  cursor: pointer;
+  transition: transform 0.4s;
+}
+
+header button:hover {
+  transform: translateY(-10px);
+  transition: transform 0.4s;
+}
+
+header button.active {
+  border-bottom: 3px solid white;
+  margin-bottom: -3px;
+  transition: border-bottom transform 0.2s;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 100vw;
+}
+
+.Home {
+  font-family: "Kaushan Script", cursive;
+
+  padding: 3rem 10rem;
+  background-color: var(--bg-color);
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.Home img {
+  object-fit: contain;
+  max-height: 250px;
+  max-width: 250px;
+  border-radius: 50%;
+}
+
+.Menu {
+  padding: 3rem;
+  background-color: var(--bg-color);
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+
+.grid-item {
+  max-width: 350px;
+  padding: 1rem;
+  background-color: var(--item-color);
+  display: flex;
+  flex-flow: column nowrap;
+  font-size: 1.25rem;
+
+  transition: all 0.2s;
+}
+
+.grid-item:hover {
+  background-color: rgba(50, 50, 50, 0.75);
+}
+
+.grid-item img {
+  height: 300px;
+  width: 300px;
+}
+
+.Contact {
+  padding: 3rem 10rem;
+  background-color: var(--bg-color);
+  font-size: 1.75rem;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+
+.col {
+  text-align: center;
+}
+
+.col li {
+  list-style: none;
+}
