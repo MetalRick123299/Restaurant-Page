@@ -12,7 +12,7 @@ function loadHome() {
   home.appendChild(h2);
 
   const img = document.createElement('img');
-  img.setAttribute('src', './src/images/chef.jpg');
+  img.setAttribute('src', './images/chef.jpg');
   img.setAttribute('alt', 'Chef Pic');
   home.appendChild(img);
 

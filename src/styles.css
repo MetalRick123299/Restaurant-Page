@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Courgette&family=Kaushan+Script&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Courgette&family=Kaushan+Script&display=swap');
 
 /*
 font-family: 'Berkshire Swash', cursive;
@@ -24,7 +24,7 @@ html {
 .content {
   min-height: 100vh;
 
-  background-image: url("./images/Burger-Background.jpg");
+  background-image: url('/public/Burger-Background.jpg');
   background-attachment: fixed;
   background-size: cover;
 
@@ -36,7 +36,7 @@ header {
 
   text-align: center;
   font-size: 2.75rem;
-  font-family: "Courgette", cursive;
+  font-family: 'Courgette', cursive;
 
   padding-bottom: 1.25rem;
   margin-bottom: 5rem;
@@ -50,7 +50,7 @@ header button {
   color: white;
 
   font-size: 2rem;
-  font-family: "Berkshire Swash", cursive;
+  font-family: 'Berkshire Swash', cursive;
   padding: 1rem;
 
   cursor: pointer;
@@ -77,7 +77,7 @@ header button.active {
 }
 
 .Home {
-  font-family: "Kaushan Script", cursive;
+  font-family: 'Kaushan Script', cursive;
 
   padding: 3rem 10rem;
   background-color: var(--bg-color);

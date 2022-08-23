@@ -23,7 +23,7 @@ function loadMenu() {
     h2.textContent = `Burger ${i}!!`;
     p.textContent = lorem.generateSentences(1);
 
-    img.setAttribute('src', `./src/images/Burgers/BurgerPic-${i}.png`);
+    img.setAttribute('src', `./images/Burgers/BurgerPic-${i}.png`);
     img.setAttribute('alt', `Burgeer Pic-${i}`);
 
     gridItem.appendChild(h2);
